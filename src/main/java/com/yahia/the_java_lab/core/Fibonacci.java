@@ -26,10 +26,32 @@ public class Fibonacci {
                 .limit(count)
                 .map(arr->arr[0])
                 .forEach(s-> System.out.print(s+" "));
+
+        System.out.println();
     }
+
+
+    //using Intstream with helper method
+    public static void intStreamFibonacci(int count){
+
+        IntStream.range(0,count)
+                .map(Fibonacci::fib)
+                .forEach(n-> System.out.print(n+" "));
+
+
+
+    }
+
+    public static int fib(int n){
+        if(n <= 1) return n;
+        return fib(n -1) + fib(n-2);
+    }
+
+
 
     public static void main(String[] args) {
         fibonacci(20);
         streamFibonacci(20);
+        intStreamFibonacci(20);
     }
 }
