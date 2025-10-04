@@ -20,6 +20,7 @@ public class Fibonacci {
         System.out.println();
     }
 
+
     //using stream api - stream iterate
     public static void streamFibonacci(int count){
         Stream.iterate(new long[]{0,1},arr-> new long[]{arr[1],arr[0]+arr[1]})
@@ -38,6 +39,8 @@ public class Fibonacci {
                 .map(Fibonacci::fib)
                 .forEach(n-> System.out.print(n+" "));
 
+        System.out.println();
+
 
 
     }
@@ -53,5 +56,12 @@ public class Fibonacci {
         fibonacci(20);
         streamFibonacci(20);
         intStreamFibonacci(20);
+
+        // traditional way recursive
+        int n = 20;
+        for( int i = 0; i < n; i++){
+            System.out.print(fib(i)+" ");
+        }
+
     }
 }
