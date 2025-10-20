@@ -23,6 +23,10 @@ public class ReverseString {
         return new String(chars);
     }
 
+    public static String reverseUsingStream(String str){
+
+    }
+
     public static void main(String[] args) {
         System.out.println(reverseUsingStringBuilder("Yahia"));
         System.out.println(reverseForLoop("Yahia"));
