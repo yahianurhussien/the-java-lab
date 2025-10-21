@@ -2,6 +2,8 @@ package com.yahia.the_java_lab.core;
 
 import java.io.FilterOutputStream;
 import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class ReverseString {
 
@@ -24,11 +26,15 @@ public class ReverseString {
     }
 
     public static String reverseUsingStream(String str){
-
+      return IntStream.range(0,str.length())
+              .mapToObj(i -> str.charAt(str.length() -1 - i))
+              .map(String::valueOf)
+              .collect(Collectors.joining());
     }
 
     public static void main(String[] args) {
         System.out.println(reverseUsingStringBuilder("Yahia"));
         System.out.println(reverseForLoop("Yahia"));
+        System.out.println(reverseUsingStream("Yahia"));
     }
 }
