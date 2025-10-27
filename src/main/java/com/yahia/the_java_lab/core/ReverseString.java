@@ -36,5 +36,6 @@ public class ReverseString {
         System.out.println(reverseUsingStringBuilder("Yahia"));
         System.out.println(reverseForLoop("Yahia"));
         System.out.println(reverseUsingStream("Yahia"));
+        System.out.println(reverseUsingStream("mammammma"));
     }
 }
