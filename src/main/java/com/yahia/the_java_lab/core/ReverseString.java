@@ -25,17 +25,15 @@ public class ReverseString {
         return new String(chars);
     }
 
-    public static String reverseUsingStream(String str){
-      return IntStream.range(0,str.length())
-              .mapToObj(i -> str.charAt(str.length() -1 - i))
-              .map(String::valueOf)
-              .collect(Collectors.joining());
-    }
-
+//    public static String reverseUsingStream(String str) {
+//        return IntStream.range(0, str.length())
+//                .map(String::valueOf)
+//                .map(String::valueOf).toString();
+//    }
     public static void main(String[] args) {
         System.out.println(reverseUsingStringBuilder("Yahia"));
         System.out.println(reverseForLoop("Yahia"));
-        System.out.println(reverseUsingStream("Yahia"));
-        System.out.println(reverseUsingStream("mammammma"));
+//        System.out.println(reverseUsingStream("Yahia"));
+//        System.out.println(reverseUsingStream("mammammma"));
     }
 }
