@@ -12,7 +12,7 @@ public class ThreeSum {
 //    Step 4: Handle duplicates carefully
 //    Step 5: Adjust pointers based on sum comparison
 
-    public static List<List<Integer>> threeSum(int[] nums) {
+    private static List<List<Integer>> threeSum(int[] nums) {
 
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums); // step1: sort the array
@@ -58,7 +58,7 @@ public class ThreeSum {
 
                     //remove duplicates for right
                     int rightVal = nums[right];
-                    if (left < right && nums[right] == rightVal) {
+                    while (left < right && nums[right] == rightVal) {
                         right--;
                     }
 
@@ -76,22 +76,26 @@ public class ThreeSum {
        return result;
     }
         public static void main (String[]args){
+         char b = 555;
+            System.out.println(b);
 
+
+             Practice practice = new Practice();
             // Test cases
             int[] nums1 = {-1, 0, 1, 2, -1, -4};
-            System.out.println("Test 1: " + threeSum(nums1));
+            System.out.println("Test 1: " + practice.threeSum(nums1));
             // Expected: [[-1,-1,2],[-1,0,1]]
 
             int[] nums2 = {0, 1, 1};
-            System.out.println("Test 2: " + threeSum(nums2));
+            System.out.println("Test 2: " + practice.threeSum(nums2));
             // Expected: []
 
             int[] nums3 = {0, 0, 0};
-            System.out.println("Test 3: " + threeSum(nums3));
+            System.out.println("Test 3: " + practice.threeSum(nums3));
             // Expected: [[0,0,0]]
 
             int[] nums4 = {-2, 0, 1, 1, 2};
-            System.out.println("Test 4: " + threeSum(nums4));
+            System.out.println("Test 4: " + practice.threeSum(nums4));
             // Expected: [[-2,0,2],[-2,1,1]]
 
         }
